@@ -1,1 +1,15 @@
 Single line comments are given by using hash(#) symbol while multiline comment are given using the delimeter """
+
+Questians for python i/o
+1-In Python3, Whatever you enter as input, the input() function converts it into a string   Answer - True
+2-What is the output of print('[%c]' % 65)   Answer - [A]
+3-What is the output of the following code 
+  print('PYnative ', end='//')
+  print(' is for ', end='//')
+  print(' Python Lovers', end='//')   Answer - PYnative // is for // Python Lovers//
+4-What is the output of the following print() function
+  print(sep='--', 'Ben', 25, 'California')   Answer - Syntax Error
+5-What is true for file mode x   Answer - Create a file, returns an error if the file exists
+
+Questians for operators
+
