@@ -69,23 +69,51 @@ Questians on Python Lists
 5-Suppose list1 is [2, 33, 222, 14, 25], What is list1[:-1]?   Answer - [2, 33, 222, 14]
 
 Questians on Python Tuples
-1-   Answer - 
-2-   Answer - 
-3-   Answer - 
-4-   Answer - 
-5-   Answer - 
+1-Which command creates a tuple?   Answer - tuple1=("a","b")
+2-What will be the output of below Python code?
+  tuple1=(2,4,3)
+  tuple3=tuple1*2
+  print(tuple3)   
+  Answer - (2,4,3,2,4,3)
+3-What will be the output of the following Python code?
+  t=(1,2,4,3)
+  t[1:-1]   
+  Answer - (2, 4)
+4-What will be the output of the following Python code?
+  t1 = (1, 2, 4, 3)
+  t2 = (1, 2, 3, 4)
+  t1 < t2   
+  Answer - False 
 
 Questians on Python Dictionary
-1-   Answer - 
-2-   Answer - 
-3-   Answer - 
-4-   Answer - 
-5-   Answer - 
-
-
-
-
-
-
-
-
+1-What will be the output of the following Python code snippet?
+  d1 = {"john":40, "peter":45}
+  d2 = {"john":466, "peter":45}
+  d1 == d2   
+  Answer - False
+2-What will be the output of the following Python code snippet?
+  d = {"john":40, "peter":45}
+  d["john"]   
+  Answer - 40
+3-What will be the output of the following Python code snippet?
+  d = {"john":40, "peter":45}
+  print(list(d.keys()))   
+  Answer - [“john”, “peter”]
+4-Find the output of the following program:
+  D = dict() 
+  for x in enumerate(range(2)): 
+      D[x[0]] = x[1] 
+      D[x[1]+7] = x[0] 
+  print(D)    
+  Answer - {0: 0, 7: 0, 1: 1, 8: 1}
+  
+Questians on Python Strings
+1-What will be the output of the following Python code? print("Hello {name1} and {name2}".format(name1='foo', name2='bin'))   Answer - Hello foo and bin
+2-What will be the output of the following Python code snippet? print('The sum of {0:b} and {1:x} is {2:o}'.format(2, 10, 12))   Answer - The sum of 10 and a is 14
+3-What will be the output of the following Python code snippet? print('{:#}'.format(1112223334))   Answer - 1112223334
+4-What will be the output of the following Python code snippet? print('{:,}'.format(1112223334))   Answer - 1,112,223,334
+5-What will be the output of below Python code?
+  str1="Information"
+  print(str1[2:8])   
+  Answer - format
+  
