@@ -1,6 +1,6 @@
 Single line comments are given by using hash(#) symbol while multiline comment are given using the delimeter """
 
-Questians for python i/o
+Questians on python i/o
 1-In Python3, Whatever you enter as input, the input() function converts it into a string   Answer - True
 2-What is the output of print('[%c]' % 65)   Answer - [A]
 3-What is the output of the following code 
@@ -11,11 +11,81 @@ Questians for python i/o
   print(sep='--', 'Ben', 25, 'California')   Answer - Syntax Error
 5-What is true for file mode x   Answer - Create a file, returns an error if the file exists
 
-Questians for operators
+Questians on operators
 1-What is the output of the following code : print 9//2   Answer - 4
 2-Which operator is overloaded by the or() function   Answer - |
 3-Which is the correct operator for power(x^y)?   Answer - x**y
 4-What is the answer to this expression, 22 % 3 is ?   Answer - 1
 5-Operators with the same precedence are evaluated in which manner?   Answer - Left to Right
+
+Questians on Namespace
+1-What will be the output of the following Python code?
+  x=1
+  def cg():
+	global x
+	x=x+1	
+  cg()
+  x
+  Answer - 2
+2-What happens if a local variable exists with the same name as the global variable you want to access?   Answer - The global variable is shadowed
+3-On assigning a value to a variable inside a function, it automatically becomes a global variable.   Answer - False
+
+Questians on Useful Functions
+1-What is the use of id() function in python?   Answer - Id() returns the identity of the object.
+2-What will be the output of the following Python expression? round(4.576)   Answer - 5
+3-What will be the output of the following Python function? all([2,4,0,6])   Answer - False
+4-What will be the output of the following Python function? any([2>8, 4>2, 1>2])   Answer - True
+
+
+Questians on Conditional and Loops
+1-How many times will the loop run?
+  i=2
+  while(i>0):
+      i=i-1
+  Answer - 2
+2-What keyword would you use to add an alternative condition to an if statement?   Answer - elif
+3-Does python have switch case statement?   Answer - False
+4-What will be the output of the following Python code?
+  i = 1
+  while True:
+      if i%2 == 0:
+          break
+      print(i)
+      i += 2
+  Answer - 1 3 5 7 . . . . .(infinite)
+  
+Questians on Python Data Types
+1-How to copy one list to another in python?   Answer - l1[] = l2[:]
+2-What type of data is: arr = [(1,1),(2,2),(3,3)]?   Answer - List of tuples
+3-Can tuple be used as dictionary key in python?   Answer - True
+4-Given a function that does not return any value, What value is thrown by default when executed in shell.   Answer - None
+5-What is the return value of trunc()?   Answer - int
+
+Questians on Python Lists
+1-What is the output when we execute list(“hello”)?   Answer - [‘h’, ‘e’, ‘l’, ‘l’, ‘o’]
+2-Suppose list1 is [1, 5, 9], what is sum(list1)?   Answer - 15
+3-To shuffle the list(say list1) what function do we use?   Answer - random.shuffle(list1)
+4-Suppose list1 is [2, 33, 222, 14, 25], What is list1[-1]?   Answer - 25
+5-Suppose list1 is [2, 33, 222, 14, 25], What is list1[:-1]?   Answer - [2, 33, 222, 14]
+
+Questians on Python Tuples
+1-   Answer - 
+2-   Answer - 
+3-   Answer - 
+4-   Answer - 
+5-   Answer - 
+
+Questians on Python Dictionary
+1-   Answer - 
+2-   Answer - 
+3-   Answer - 
+4-   Answer - 
+5-   Answer - 
+
+
+
+
+
+
 
 
