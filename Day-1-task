@@ -12,4 +12,10 @@ Questians for python i/o
 5-What is true for file mode x   Answer - Create a file, returns an error if the file exists
 
 Questians for operators
+1-What is the output of the following code : print 9//2   Answer - 4
+2-Which operator is overloaded by the or() function   Answer - |
+3-Which is the correct operator for power(x^y)?   Answer - x**y
+4-What is the answer to this expression, 22 % 3 is ?   Answer - 1
+5-Operators with the same precedence are evaluated in which manner?   Answer - Left to Right
+
 
