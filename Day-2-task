@@ -1,1 +1,79 @@
+Questians on Indexing with Sequences
+1-What is printed by the following statements?
+  s = "python rocks"
+  print(s[1] * s.index("n"))
+  Asnwer - yyyyy
+2-What will be printed when the following executes?
+  str = "His shirt is red"
+  pos = str.find("is")
+  print(pos)
+  Asnwer - 1
+3-What will be printed when the following executes?
+  str = "This is fun"
+  str = str[5]
+  print(str)
+  Answer - i
+4-What is printed by the following statements?
+  s = "python rocks"
+  print(s[3])
+  Answer - h
+5-What is printed by the following statements:
+  s = "Rose"
+  s[1] = "i"
+  print(s)
+  Answer - TypeError
 
+Questians on Slicing with Sequences
+1-What is the output of the following
+  s = "abcdef"
+  print(s[0:2:-1])
+  Asnwer - Empty string
+2-what is the syntax of string slice   Answer - x[start:end:step]
+3-What will give "Simon" as output? If str1="John,Simon,Aryan"   Answer - print(str1[-11:-6])
+4-What would the following code print?
+  Mali = 5
+  print("Mali" + " is " + str(Mali))
+  Answer - Mali is 5
+5-What is printed by the following statements?
+  s = "python is awesome"
+  print(s[2] + s[-5])
+  Answer - te
+
+Questians on Exception handling
+1-How many except statements can a try-except block have?   Answer - more than zero
+2-When will the else part of try-except-else be executed?   Answer - when no exception occurs
+3-When is the finally block executed?   Answer - always
+4-What will be the output of the following Python code?
+  def foo():
+      try:
+          print(1)
+      finally:
+          print(2)
+  foo()   
+  Answer - 1 2
+5-What will be the output of the following Python code?
+  def foo():
+      try:
+          return 1
+      finally:
+          return 2
+  k = foo()
+  print(k)  
+  Answer - 2
+
+Questians on Regular Expression
+1-Which module in Python supports regular expressions?   Answer - re
+2-What does the function re.match do?   Answer - matches a pattern at the start of the string
+3-What does the function re.search do?   Answer - matches a pattern at any position in the string
+4-What will be the output of the following Python code?
+  sentence = 'we are humans'
+  matched = re.match(r'(.*) (.*?) (.*)', sentence)
+  print(matched.group())  
+  Answer - ‘we are humans’
+5-What will be the output of the following Python code?
+  sentence = 'horses are fast'
+  regex = re.compile('(?P<animal>\w+) (?P<verb>\w+) (?P<adjective>\w+)')
+  matched = re.search(regex, sentence)
+  print(matched.groupdict()) 
+  Answer - {‘animal’: ‘horses’, ‘verb’: ‘are’, ‘adjective’: ‘fast’}
+  
