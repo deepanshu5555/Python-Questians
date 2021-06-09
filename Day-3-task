@@ -1,27 +1,80 @@
 Questions on Functions and Modules
-1-   Answer - 
-2-   Answer - 
-3-   Answer - 
-4-   Answer - 
-5-   Answer - 
+1-Which keyword is used for function?   Answer - def
+2-What is the output of the code shown below?
+  l=[-2, 4]
+  m=map(lambda x:x*2, l)
+  print(m) 
+  Answer - Address of m
+3-What is the output of the following?
+  x = [12, 34]
+  print(len(''.join(list(map(str, x)))))  
+  Answer - 4
+4-What is the output of the code shown below if the system date is 18th August, 2016?
+  tday=datetime.date.today()
+  print(tday.month())   
+  Answer - 8
+5-What is the output of the following?
+  def to_upper(k):
+      k.upper()
+  x = ['ab', 'cd']
+  print(list(map(to_upper, x)))  
+  Answer - [None, None]
 
 Questions on List Comprehension
-1-   Answer - 
-2-   Answer - 
-3-   Answer - 
-4-   Answer - 
-5-   Answer - 
+1-What will be the output of the following Python code snippet?
+ k = [print(i) for i in my_string if i not in "aeiou"] 
+ Answer - prints all characters of my_string that aren’t vowels
+2-hat will be the output of the following Python code snippet?
+  x = [i**+1 for i in range(3)]; print(x);
+  Answer - [0, 1, 2]
+3-What will be the output of the following Python code snippet?
+  print([i.lower() for i in "HELLO"]) 
+  Answer - [‘h’, ‘e’, ‘l’, ‘l’, ‘o’]
+4-What will be the output of the following Python code snippet?
+  print([[i+j for i in "abc"] for j in "def"]) 
+  Answer - [[‘ad’, ‘bd’, ‘cd’], [‘ae’, ‘be’, ‘ce’], [‘af’, ‘bf’, ‘cf’]]
+5-What is same as list(map(lambda x: x**-1, [1, 2, 3]))?   Answer - [1/x for x in (1, 2, 3)]
 
 Questions on Iterators
-1-   Answer - 
-2-   Answer - 
-3-   Answer - 
-4-   Answer - 
-5-   Answer - 
+1-What are python iterators?   Answer - objects
+2-The error displayed in the code shown below is:
+  import itertools
+  l1=(1, 2, 3)
+  l2=[4, 5, 6]
+  l=itertools.chain(l1, l2)
+  print(next(l1))   
+  Answer - ‘tuple’ object is not iterator
+3-What is the advantage of using Iterators  
+  Answer - The major advantage of using iterators is that they help save resources and make the code look cleaner.Iterators can save us a lot of memory and CPU time.
+4-What are the methods used with an Iterator to iterate through a sequence?
+  Answer - __ier()__ and __next()__ methods are used with an iterator to iterate through the given sequence.
+5-Will an Iterator prints all the elements of the given sequence at a time using a print statement?
+  Answer - No, an iterator will print only one element at a time using a single print statement.
 
 Questions on Generators
-1-   Answer - 
-2-   Answer - 
-3-   Answer - 
-4-   Answer - 
-5-   Answer - 
+1-What is the output of the code shown below?
+  g = (i for i in range(5))
+  type(g)
+  Answer - 	class <’generator’>
+2-What is a Generator?   
+  Answer - The generator is a function that yields an object (iterator) which we can iterate over one value at a time.
+3-What is the output of the code shown below?
+  def f(x):
+      yield x+1
+      print("test")
+      yield x+2
+  g=f(10)
+  print(next(g))
+  print(next(g)) 
+  Answer - 11
+           test
+           12
+4-What is the output of the code shown?
+  def f(x):
+      for i in range(5):
+          yield i
+  g=f(8)
+  print(list(g)) 
+  Answer - [0, 1, 2, 3, 4]
+5-What is the difference between Return vs. Yield  
+  Answer - The return is a final statement of a function. The yield preserves the state between subsequent function calls.
