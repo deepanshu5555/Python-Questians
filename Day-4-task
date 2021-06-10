@@ -1,20 +1,71 @@
 Questions on Classes and Objects in Python
-1-
-2-
-3-
-4-
-5-
+1-_____ represents an entity in the real world with its identity and behaviour.   Answer - an Object
+2-What will be the output of the following Python code?
+  class test:
+       def __init__(self,a="Hello World"):
+           self.a=a
+       def display(self):
+           print(self.a)
+  obj=test()
+  obj.display() 
+  Answer - “Hello World” is displayed
+3-What is setattr() used for?   Answer - To set an attribute
+4-What is getattr() used for?   Answer - To access the attribute of the object
+5-What will be the output of the following Python code?
+  class change:
+      def __init__(self, x, y, z):
+          self.a = x + y + z
+  x = change(1,2,3)
+  y = getattr(x, 'a')
+  setattr(x, 'a', y+1)
+  print(x.a)  
+  Answer - 7
+6-What will be the output of the following Python code?
+  class test:
+      def __init__(self):
+          self.variable = 'Old'
+          self.Change(self.variable)
+      def Change(self, var):
+          var = 'New'
+  obj=test()
+  print(obj.variable)
+  Answer - ‘Old’ is printed
 
 Questions on Closure and Decorators
-1-
-2-
-3-
-4-
-5-
+1-In the following Python code, which function is the decorator?
+  def mk(x):
+      def mk1():
+          print("Decorated")
+          x()
+      return mk1
+  def mk2():
+      print("Ordinary")
+  p = mk(mk2)
+  p()
+  Answer - mk()
+2-The ______ symbol along with the name of the decorator function can be placed above the definition of the function to be
+  decorated works as an alternate way for decorating a function. 
+  Answer - @
+3-he following python code can work with ____ parameters.
+  def f(x):
+      def f1(*args, **kwargs):
+             print("Sanfoundry")
+             return x(*args, **kwargs)
+      return f1   
+      Answer - any number of
+4-When and why to use Closures?
+  Answer - As closures are used as callback functions, they provide some sort of data hiding. This helps us to reduce the use of global variables.
+5-How can we Define Python Closure Function?  
+  Answer - def outerfunc(x):
+                def innerfunc():
+                      print(x)
+                return innerfunc 
+           myfunc=outerfunc(7)
+           print(myfunc)
 
 Questions on Descriptors and properties
-1-
-2-
-3-
-4-
-5-
+1-   Answer - 
+2-   Answer - 
+3-   Answer - 
+4-   Answer - 
+5-   Answer - 
