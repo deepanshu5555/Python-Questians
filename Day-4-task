@@ -64,8 +64,35 @@ Questions on Closure and Decorators
            print(myfunc)
 
 Questions on Descriptors and properties
-1-   Answer - 
-2-   Answer - 
-3-   Answer - 
-4-   Answer - 
-5-   Answer - 
+1-What are descriptor 
+  Answer - Python descriptors are created to manage the attributes of different classes which use the object as reference.
+           In descriptors we used three different methods that are __getters__(), __setters__(), and __delete__().
+2-Descriptors are invoked by the which method ?   Answer -  __getattribute__()
+3-What are the advantages of descriptors   
+  Answer - escriptors can increase the readability of a program and it can validate the data based on our requirements. 
+           These are low-level features and by using them we can reuse the code.
+4-How to creat descriptors using class  
+  Answer - 
+  class rk:
+	def __init__(self):
+		self.value=0
+		
+	def __get__(self,ob, ty):
+		print ("get method")		
+		return self.value
+		
+	def __set__(self, ob, ty):
+		self.value = ty
+		print("set method",self.value)
+	
+	def __delete__(self, ob):	
+		print("delete method")
+		del self.value
+
+class inc:
+	r=rk()
+	
+a=inc()
+print(a.r)
+a.r=3
+del a.r
