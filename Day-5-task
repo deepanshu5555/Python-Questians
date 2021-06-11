@@ -6,17 +6,33 @@ Questions on Data Handling
 5-What makes use of pandas and returns data in a Series or DataFrame ?   Answer - freedapi
 
 Questions on Working with Files
-1-   Answer - 
-2-   Answer - 
-3-   Answer - 
-4-   Answer - 
-5-   Answer - 
+1-When reading a file using the file object, what method is best for reading the entire file into a single string?   Answer - .read()
+2-What will be the output of the following Python code?
+  f = None
+  for i in range (5):
+      with open("data.txt", "w") as f:
+          if i > 2:
+              break
+  print(f.closed)   Answer - outfile = open(“c:\\scores.txt”, “w”)
+  Answer - True
+3-Given the file dog_breeds.txt, what is the correct way to open the file for reading as a text file?   Answer - open('dog_breeds.txt', 'r')
+4-Given the file jack_russell.png, which of the following is the correct way to open the file for reading as a buffered binary file?   Answer - open('jack_russell.png', 'rb')
+5-Whenever possible, what is the recommended way to ensure that a file object is properly closed after usage?   Answer - By using the with statement
 
 Questions on Database Connectivity
-1-   Answer - 
-2-   Answer - 
-3-   Answer - 
-4-   Answer - 
-5-   Answer - 
+1-What is the name of the SQL database the comes distributed with Python?   Answer - SQLite
+2-Which of the following code snippets creates and connects to a new SQLite Database?   
+  Answer - import sqlite3
+           connection = sqlite3.connect("test_database.db")
+3-Which of the following are valid Cursor methods used to execute SQL statments and retrieve query results?   Answer - Cursor.execute()
+4-What is the type of the results variable in the following code snippet?
+  import sqlite3
+
+  connection = sqlite3.connection("people.db")
+  cursor = connection.cursor()
+  cursor.execute("SELECT * FROM People")
+  results = cursor.fetchall()   
+  Answer - list
+5-By using sqlite3 , we can store our data on   Answer - local
 
 
