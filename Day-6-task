@@ -69,7 +69,114 @@ Array Indexing & Slicing
   print a[2:5]
   Answer - [2  3  4] 
   
+Memory layout of ndarray
+-An instance of class ndarray consists of a contiguous one-dimensional segment of computer memory (owned by the array, or by some other object), 
+ combined with an indexing scheme that maps N integers into the location of an item in the block. The ranges in which the indices can vary is specified by
+ the shape of the array. How many bytes each item takes and how the bytes are interpreted is defined by the data-type object associated with the array.
+-Memory layout - ndarray.flags,ndarray.shape,ndarray.strides,ndarray.ndim,ndarray.data,ndarray.size,ndarray.itemsize,ndarray.nbytes,ndarray.base .
+ 
+Views and Copies
+1-What is the output of the following program. 
+  import numpy as np 
+  a = np.array([[10,10], [2,3], [4,5]]) 
+  print 'Our array is:' 
+  print a  
+  print 'Create a slice:' 
+  s = a[:, :2] 
+  print s 
+  Answer - Our array is:
+            [[10 10]
+             [ 2 3]
+             [ 4 5]]
+
+            Create a slice:
+            [[10 10]
+             [ 2 3]
+             [ 4 5]]
+
+2-What is the output of the following program. 
+  import numpy as np 
+  a = np.array([[10,10], [2,3], [4,5]]) 
+  print 'Array a is:' 
+  print a  
+  print 'Create a deep copy of a:' 
+  b = a.copy() 
+  print 'Array b is:' 
+  print b  
+  print 'Can we write b is a' 
+  print b is a  
+  print 'Change the contents of b:' 
+  b[0,0] = 100 
+  print 'Modified array b:' 
+  print b  
+  print 'a remains unchanged:' 
+  print a
+  Answer - Array a is:
+[[10 10]
+ [ 2 3]
+ [ 4 5]]
+
+Create a deep copy of a:
+Array b is:
+[[10 10]
+ [ 2 3]
+ [ 4 5]]
+Can we write b is a
+False
+
+Change the contents of b:
+Modified array b:
+[[100 10]
+ [ 2 3]
+ [ 4 5]]
+
+a remains unchanged:
+[[10 10]
+ [ 2 3]
+ [ 4 5]]
   
+Creating arrays
+1-What is the output of the following program.
+  import numpy as np 
+  x = np.empty([3,2], dtype = int) 
+  print x
+  Asnwer - [[22649312    1701344351] 
+            [1818321759  1885959276] 
+            [16779776    156368896]]
+2-What is the output of the following program.
+  import numpy as np 
+  x = np.zeros(5) 
+  print x
+  Answer - [ 0.  0.  0.  0.  0.]
+3-What is the output of the following program.
+  import numpy as np 
+  x = np.zeros((2,2), dtype = [('x', 'i4'), ('y', 'i4')])  
+  print x
+  Answer - [[(0,0)(0,0)]
+            [(0,0)(0,0)]] 
+            
+Array data Types
+1-What is the output of the following program.
+  import numpy as np 
+  dt = np.dtype(np.int32) 
+  print dt
+  Answer - int32
+2-What is the output of the following program.
+  import numpy as np 
+  dt = np.dtype('>i4') 
+  print dt
+  Answer - >i4
+3-What is the output of the following program.
+  import numpy as np 
+  dt = np.dtype([('age',np.int8)]) 
+  print dt 
+  Answer - [('age', 'i1')] 
+4-What is the output of the following program.
+  import numpy as np 
+  dt = np.dtype([('age',np.int8)]) 
+  a = np.array([(10,),(20,),(30,)], dtype = dt) 
+  print a['age']
+  Answer - [(10,) (20,) (30,)]
 
 
 
