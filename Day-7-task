@@ -1,0 +1,124 @@
+Linear Algebra with Numpy
+1-import numpy as geek
+  vector_a = 2 + 3j
+  vector_b = 4 + 5j
+  product = geek.vdot(vector_a, vector_b)
+  print("Dot Product  : ", product)
+  Answer - Dot Product  :  (23-2j)
+2-import numpy as np
+  a = np.array([[1, 2], [3, 4]])
+  b = np.array([8, 18])
+  print(("Solution of linear equations:", 
+        np.linalg.solve(a, b)))
+  Answer - Solution of linear equations: [ 2.  3.]
+3-import numpy as np
+  A = np.array([[6, 1, 1],
+                [4, -2, 5],
+                [2, 8, 7]])
+  print("\nTrace of A:", np.trace(A))
+  Answer - Trace of A: 11
+
+Using Numpy Arrays
+1-import numpy as np
+  arr = np.array([1, 2, 3, 4, 5])
+  print(arr)
+  print(type(arr))
+  Asnwer - [1 2 3 4 5]
+            <class 'numpy.ndarray'>
+2-import numpy as np
+  arr = np.array((1, 2, 3, 4, 5))
+  print(arr)
+  Asnwer - [1 2 3 4 5]
+3-import numpy as np
+  arr = np.array(42)
+  print(arr)
+  Asnwer - 42
+  
+Vectorized operations
+1-import numpy as np
+  import timeit
+  print(np.sum(np.arange(15000)))
+  print("Time taken by vectorized sum : ", end = "")
+  %timeit np.sum(np.arange(15000))
+  total = 0
+  for item in range(0, 15000):
+      total += item
+  a = total
+  print("\n" + str(a))
+  print("Time taken by iterative sum : ", end = "")
+  %timeit a
+  
+2-import numpy as np
+  import timeit
+  import math
+  print("Time taken by vectorized operation : ", end = "")
+  %timeit np.exp(np.arange(150))
+  print("Time taken by non-vectorized operation : ", end = "")
+  %timeit [math.exp(item) for item in range(150)]
+
+Universal functions
+1-import numpy as np
+  even = np.array([0, 2, 4, 6, 8, 16, 32])
+  odd = np.array([1, 3, 5, 7, 9, 17, 33])
+  print('bitwise_and of two arrays: ')
+  print(np.bitwise_and(even, odd))
+  print('bitwise_or of two arrays: ')
+  print(np.bitwise_or(even, odd))
+  print('bitwise_xor of two arrays: ')
+  print(np.bitwise_xor(even, odd))
+  print('inversion of even no. array: ')
+  print(np.invert(even))
+  print('left_shift of even no. array: ')
+  print(np.left_shift(even, 1))
+  print('right_shift of even no. array: ')
+  print(np.right_shift(even, 1))
+  Answer - bitwise_and of two arrays: 
+      [ 0  2  4  6  8 16 32]
+
+      bitwise_or of two arrays: 
+      [ 1  3  5  7  9 17 33]
+
+      bitwise_xor of two arrays: 
+      [1 1 1 1 1 1 1]
+
+      inversion of even no. array: 
+      [ -1  -3  -5  -7  -9 -17 -33]
+
+      left_shift of even no. array: 
+      [ 0  4  8 12 16 32 64]
+
+      right_shift of even no. array: 
+      [ 0  1  2  3  4  8 16]
+
+Boolean mask
+1-import numpy as np
+  import pandas as pd
+  rainfall = pd.read_csv('data/Seattle2014.csv')['PRCP'].values
+  inches = rainfall / 254.0  # 1/10mm -> inches
+  inches.shape
+  Answer - (365,)
+2-%matplotlib inline
+  import matplotlib.pyplot as plt
+  import seaborn; seaborn.set() 
+  Answer - plt.hist(inches, 40);
+
+Dates and time in Numpy
+1-Write a NumPy program to get the dates of yesterday, today and tomorrow.
+Answer - 
+import numpy as np
+yesterday = np.datetime64('today', 'D') - np.timedelta64(1, 'D')
+print("Yestraday: ",yesterday)
+today     = np.datetime64('today', 'D')
+print("Today: ",today)
+tomorrow  = np.datetime64('today', 'D') + np.timedelta64(1, 'D')
+print("Tomorrow: ",tomorrow)
+2-Write a NumPy program to count the number of days of specific month.
+Answer -
+import numpy as np
+print("Number of days, February, 2016: ")
+print(np.datetime64('2016-03-01') - np.datetime64('2016-02-01'))
+print("Number of days, February, 2017: ")
+print(np.datetime64('2017-03-01') - np.datetime64('2017-02-01'))
+print("Number of days, February, 2018: ")
+print(np.datetime64('2018-03-01') - np.datetime64('2018-02-01'))
+
