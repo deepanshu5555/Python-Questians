@@ -1,7 +1,8 @@
 import random
+import math
 print("Welcome to the number guessing game! Enter any number between 330 to 430")
 x=random.randint(330,430)
-n=8
+n=int(math.log((430-330),2))+1
 print("You only have 8 attamps")
 flag=False
 while(n):
